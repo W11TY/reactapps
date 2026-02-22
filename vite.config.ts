@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/SARAS-SAM/", // 👈 EXACT repo name (case-sensitive)
+  base: "/reactapps/", // 👈 EXACT repo name (case-sensitive)
   server: {
     host: "::",
     port: 8080,

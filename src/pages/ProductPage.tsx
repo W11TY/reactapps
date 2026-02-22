@@ -184,9 +184,15 @@ const ProductPage = () => {
 
               {/* Actions */}
               <div className="flex gap-3 mb-12">
-                <button className="flex-1 py-4 bg-foreground text-background text-sm tracking-luxury uppercase font-medium hover:bg-primary transition-colors duration-300">
-                  Wrap Yourself in Warmth
-                </button>
+                <a
+                  href={`https://wa.me/919876543210?text=Hi, I'm interested in this product: ${encodeURIComponent(product.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="bg-[#610018] text-white px-6 py-3 rounded-lg">
+                    Buy Now on WhatsApp
+                  </button>
+                </a>
                 <button
                   onClick={() => setLiked(!liked)}
                   className="px-5 py-4 border border-border hover:border-foreground transition-colors"
