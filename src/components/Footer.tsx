@@ -63,12 +63,22 @@ const Footer = () => {
 
           </p>
           <div className="flex gap-6">
-            {["Instagram", "Pinterest", "Newsletter"].map((item) =>
-            <a key={item} href="#" className="text-xs text-background/40 hover:text-background transition-colors uppercase tracking-luxury">
-                {item}
-              </a>
-            )}
-          </div>
+              {[
+                { name: "Instagram", link: "https://instagram.com/" },
+                { name: "Pinterest", link: "https://pinterest.com/" },
+                { name: "Newsletter", link: "/newsletter" },
+              ].map((item) => (
+                <a
+                  key={item.name}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-background/40 hover:text-background transition-colors uppercase tracking-luxury"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
         </div>
       </div>
     </footer>);
