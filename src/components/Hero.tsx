@@ -24,7 +24,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-sm tracking-wide-luxury uppercase text-cream/80 mb-6 font-body"
         >
-          SARAS 
+           
         </motion.p>
 
         <motion.h1
@@ -33,8 +33,8 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-cream leading-tight mb-6"
         >
-          SARAS <br />
-          <span className="italic font-light">KnitWear</span>
+           <br />
+          <span className="italic font-light"></span>
         </motion.h1>
 
         <motion.p
@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-cream/80 text-lg md:text-xl font-light max-w-xl mx-auto mb-10 font-body"
         >
-        designed to bring comfort, softness, and timeless warmth.
+        
         </motion.p>
 
         <motion.div
