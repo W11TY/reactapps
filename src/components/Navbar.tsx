@@ -16,8 +16,7 @@ const Navbar = () => {
   const navLinks = [
   { label: "Collection", href: "/collection" },
   { label: "Our Story", href: "/story" },
-  { label: "Craft Process", href: "/craft" },
-  { label: "Journal", href: "/journal" }];
+  
 
 
   return (
