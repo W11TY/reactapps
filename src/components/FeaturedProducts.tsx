@@ -14,10 +14,10 @@ const products = [
   { id: "cable-knit-scarf", name: "Cable Knit Scarf Red", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
   { id: "cable-knit-scarf", name: "Cable Knit Scarf Blue", price: "₹2,450", time: "8 hours", image: productblue, tag: "Bestseller" },
   { id: "cable-knit-scarf", name: "Cable Knit Scarf Striped", price: "₹2,450", time: "8 hours", image: productstriped, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
 ];
 
 const ProductCard = ({ product, index }: { product: typeof products[0]; index: number }) => {

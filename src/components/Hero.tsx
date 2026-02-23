@@ -57,7 +57,7 @@ const Hero = () => {
             to="/collection"
             className="inline-block px-10 py-4 border border-cream/40 text-cream text-sm tracking-luxury uppercase font-medium hover:bg-cream/10 transition-all duration-300"
           >
-           
+            Explore Collection
           </Link>
         </motion.div>
       </div>
