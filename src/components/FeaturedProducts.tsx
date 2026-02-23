@@ -3,20 +3,21 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
 
-import productScarf from "@/assets/product-scarf.jpg";
-import productBeanie from "@/assets/product-beanie.jpg";
-import productCardigan from "@/assets/product-cardigan.jpg";
+import productScarf from "@/assets/product-scarf(red).jpg";
+import productBeanie from "@/assets/product-scarf(blue).jpg";
+import productCardigan from "@/assets/product-scarf.jpg";
 import productMittens from "@/assets/product-mittens.jpg";
 import productBlanket from "@/assets/product-blanket.jpg";
 import productSocks from "@/assets/product-socks.jpg";
 
 const products = [
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf Red", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf Blue", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf Striped", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
   { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
-  { id: "heritage-beanie", name: "Heritage Wool Beanie", price: "₹1,850", time: "5 hours", image: productBeanie },
-  { id: "aran-cardigan", name: "Aran Cable Cardigan", price: "₹6,900", time: "24 hours", image: productCardigan, tag: "New" },
-  { id: "nordic-mittens", name: "Nordic Pattern Mittens", price: "₹1,650", time: "6 hours", image: productMittens },
-  { id: "chunky-throw", name: "Chunky Throw Blanket", price: "₹5,200", time: "18 hours", image: productBlanket, tag: "Limited" },
-  { id: "fireside-socks", name: "Fireside Wool Socks", price: "₹1,250", time: "4 hours", image: productSocks },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
+  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productScarf, tag: "Bestseller" },
 ];
 
 const ProductCard = ({ product, index }: { product: typeof products[0]; index: number }) => {
