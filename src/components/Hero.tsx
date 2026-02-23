@@ -52,13 +52,13 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
+         
           <Link
             to="/collection"
-            className="inline-block px-10 py-4 bg-cream text-warm-black text-sm tracking-luxury uppercase font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+            className="inline-block px-10 py-4 border border-cream/40 text-cream text-sm tracking-luxury uppercase font-medium hover:bg-cream/10 transition-all duration-300"
           >
             Explore Collection
           </Link>
-          
         </motion.div>
       </div>
 
