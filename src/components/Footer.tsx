@@ -46,11 +46,20 @@ const Footer = () => {
           {/* Care */}
           <div>
             <h4 className="text-xs tracking-luxury uppercase text-background/40 mb-6">Support</h4>
+            <ul className="space-y-3">
+              {["Shipping & Returns", "Care Guide", "Size Guide", "Contact Us", "FAQ"].map((item) =>
+              <li key={item}>
+                  <Link to="/" className="text-sm text-background/60 hover:text-background transition-colors">
+                    {item}
+                  </Link>
+                </li>
+              )}
+            </ul>
           </div>
         </div>
 
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-background/40">© 2026 SARAS. Crafted with BMH
+          <p className="text-xs text-background/40">© 2026 SARAS. Crafted with ♡
 
           </p>
           <div className="flex gap-6">
