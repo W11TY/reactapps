@@ -6,18 +6,11 @@ import { Heart } from "lucide-react";
 import productred from "@/assets/product-scarf(red).jpg";
 import productblue from "@/assets/product-scarf(blue).jpg";
 import productstriped from "@/assets/product-scarf.jpg";
-import productMittens from "@/assets/product-mittens.jpg";
-import productBlanket from "@/assets/product-blanket.jpg";
-import productSocks from "@/assets/product-socks.jpg";
 
 const products = [
   { id: "cable-knit-scarf", name: "Cable Knit Scarf Red", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
   { id: "cable-knit-scarf", name: "Cable Knit Scarf Blue", price: "₹2,450", time: "8 hours", image: productblue, tag: "Bestseller" },
   { id: "cable-knit-scarf", name: "Cable Knit Scarf Striped", price: "₹2,450", time: "8 hours", image: productstriped, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
-  { id: "cable-knit-scarf", name: "Cable Knit Scarf", price: "₹2,450", time: "8 hours", image: productred, tag: "Bestseller" },
 ];
 
 const ProductCard = ({ product, index }: { product: typeof products[0]; index: number }) => {

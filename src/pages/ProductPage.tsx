@@ -6,11 +6,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 import productScarf from "@/assets/product-scarf.jpg";
-import productBeanie from "@/assets/product-beanie.jpg";
-import productCardigan from "@/assets/product-cardigan.jpg";
-import productMittens from "@/assets/product-mittens.jpg";
-import productBlanket from "@/assets/product-blanket.jpg";
-import productSocks from "@/assets/product-socks.jpg";
+import productred from "@/assets/product-scarf(red).jpg";
+import productblue from "@/assets/product-scarf(blue).jpg";
+
 
 const allProducts: Record<string, {
   name: string; price: string; time: string; image: string;
@@ -30,7 +28,7 @@ const allProducts: Record<string, {
     name: "Heritage Wool Beanie",
     price: "₹1,850",
     time: "5 hours",
-    image: productBeanie,
+    image: productred,
     description: "A timeless beanie crafted with heritage knitting techniques passed down through generations. Rich wool brown tones with subtle cream detailing.",
     materials: "100% Highland Wool · Hand-knitted · Natural brown and cream dyes · Elasticated ribbed brim",
     care: "Hand wash in cold water. Reshape while damp. Dry flat away from heat. Store in a cool, dry place.",
@@ -40,7 +38,7 @@ const allProducts: Record<string, {
     name: "Aran Cable Cardigan",
     price: "₹6,900",
     time: "24 hours",
-    image: productCardigan,
+    image: productblue,
     description: "Our masterpiece. A full Aran cable cardigan that takes 24 hours of dedicated hand-knitting. Traditional cable patterns meet modern comfort.",
     materials: "100% Organic Merino Wool · Hand-knitted · Wooden buttons hand-carved · Natural cream color",
     care: "Dry clean recommended. If hand washing, use wool-specific detergent in lukewarm water. Never wring. Lay flat to dry.",
@@ -50,7 +48,7 @@ const allProducts: Record<string, {
     name: "Nordic Pattern Mittens",
     price: "₹1,650",
     time: "6 hours",
-    image: productMittens,
+    image: productred,
     description: "Beautifully patterned mittens featuring traditional Nordic colorwork. Warm, playful, and utterly charming.",
     materials: "100% Wool blend · Two-color jacquard technique · Fleece-lined interior · Ribbed cuffs",
     care: "Hand wash in cool water. Do not bleach. Reshape and dry flat. Store away from moths with cedar blocks.",
@@ -60,7 +58,7 @@ const allProducts: Record<string, {
     name: "Chunky Throw Blanket",
     price: "₹5,200",
     time: "18 hours",
-    image: productBlanket,
+    image: productblue,
     description: "A generous, chunky knit throw blanket that transforms any space into a cozy sanctuary. Made with super-bulky yarn for maximum warmth.",
     materials: "100% Extra-fine Merino · Super-bulky weight · Hand-knitted · Natural cream with fringe detail",
     care: "Spot clean or dry clean only due to size. Air regularly. Fold for storage, do not compress.",
@@ -70,7 +68,7 @@ const allProducts: Record<string, {
     name: "Fireside Wool Socks",
     price: "₹1,250",
     time: "4 hours",
-    image: productSocks,
+    image: productred,
     description: "Thick, warm wool socks designed for cozy evenings by the fire. Reinforced heel and toe for lasting comfort.",
     materials: "80% Wool, 20% Nylon for durability · Hand-knitted · Reinforced construction · Warm brown with cream accents",
     care: "Hand wash in lukewarm water. Turn inside out. Dry flat. These socks will felt if machine washed.",
@@ -185,7 +183,7 @@ const ProductPage = () => {
               {/* Actions */}
               <div className="flex gap-3 mb-12">
                 <a
-                  href={`https://wa.me/919876543210?text=Hi, I'm interested in this product: ${encodeURIComponent(product.name)}`}
+                  href={`https://wa.me/917753896699?text=Hi, I'm interested in this product: ${encodeURIComponent(product.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

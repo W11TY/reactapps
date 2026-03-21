@@ -5,6 +5,7 @@ const Footer = () => {
     <footer className="text-background/80 py-16 lg:py-20 bg-accent">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
+
           {/* Brand */}
           <div className="md:col-span-1">
             <Link to="/" className="font-heading text-2xl text-background block mb-4">
@@ -15,74 +16,88 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Shop */}
-          <div>
-            <h4 className="text-xs tracking-luxury uppercase text-background/40 mb-6">Shop</h4>
-            <ul className="space-y-3">
-              {["New Arrivals", "Sweaters & Cardigans", "Scarves & Wraps", "Accessories", "Home & Blankets"].map((item) =>
-              <li key={item}>
-                  <Link to="/collection" className="text-sm text-background/60 hover:text-background transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              )}
-            </ul>
-          </div>
-
           {/* About */}
           <div>
-            <h4 className="text-xs tracking-luxury uppercase text-background/40 mb-6">About</h4>
+            <h4 className="text-xs tracking-luxury uppercase text-background/40 mb-6">
+              About
+            </h4>
             <ul className="space-y-3">
-              {["Our Story", "Craft Process", "Artisan Community", "Sustainability", "Journal"].map((item) =>
-              <li key={item}>
-                  <Link to="/story" className="text-sm text-background/60 hover:text-background transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              )}
+              <li>
+                <Link
+                  to="/story"
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                >
+                  Our Story
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Care */}
+          {/* Support */}
           <div>
-            <h4 className="text-xs tracking-luxury uppercase text-background/40 mb-6">Support</h4>
+            <h4 className="text-xs tracking-luxury uppercase text-background/40 mb-6">
+              Support
+            </h4>
             <ul className="space-y-3">
-              {["Shipping & Returns", "Care Guide", "Size Guide", "Contact Us", "FAQ"].map((item) =>
-              <li key={item}>
-                  <Link to="/" className="text-sm text-background/60 hover:text-background transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              )}
+              <li>
+                <Link
+                  to="/shipping-returns"
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                >
+                  Shipping & Returns
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                >
+                  FAQ
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
+        {/* Bottom */}
         <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-background/40">© 2026 SARAS. Crafted with ♡
-
+          <p className="text-xs text-background/40">
+            © 2026 SARAS.
           </p>
+
           <div className="flex gap-6">
-              {[
-                { name: "Instagram", link: "https://instagram.com/" },
-                { name: "Pinterest", link: "https://pinterest.com/" },
-                { name: "Newsletter", link: "/newsletter" },
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-background/40 hover:text-background transition-colors uppercase tracking-luxury"
-                >
-                  {item.name}
-                </a>
-              ))}
-            </div>
+            {/* External */}
+            <a
+              href="https://www.instagram.com/saras.in_?igsh=YXFibW50M3AweXZz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-background/40 hover:text-background transition-colors uppercase tracking-luxury"
+            >
+              Instagram
+            </a>
+
+            {/* Internal */}
+            <Link
+              to="/newsletter"
+              className="text-xs text-background/40 hover:text-background transition-colors uppercase tracking-luxury"
+            >
+              Newsletter
+            </Link>
+          </div>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 };
 
 export default Footer;

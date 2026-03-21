@@ -12,7 +12,7 @@ const FinalCTA = () => {
       <div className="absolute inset-0">
         <img
           src={ctaBg}
-          alt="Cozy knitted blankets with warm candlelight"
+          alt="Hand-knitted scarves in warm tones"
           className="w-full h-full object-cover"
           loading="lazy"
         />
@@ -26,16 +26,18 @@ const FinalCTA = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="font-heading text-4xl md:text-5xl lg:text-7xl font-light text-cream mb-6">
-            Bring Warmth Home
+            Wrap Yourself in Warmth
           </h2>
+
           <p className="text-cream/70 text-lg max-w-md mx-auto mb-10">
-            Discover pieces that carry stories, warmth, and the gentle touch of human hands.
+            Three tones. One craft. Each piece shaped slowly, with intention.
           </p>
+
           <Link
-            to="/collection"
-            className="inline-block px-12 py-4 bg-cream text-warm-black text-sm tracking-luxury uppercase font-medium hover:bg-accent hover:text-accent-foreground transition-all duration-300"
+            to="/collection" // ✅ correct route
+            className="inline-block px-12 py-4 bg-cream text-warm-black text-sm tracking-luxury uppercase font-medium transition-all duration-300 hover:bg-accent hover:text-accent-foreground hover:scale-[1.02] active:scale-[0.98]"
           >
-            Shop the Saras Collection
+            Explore the Scarf Line
           </Link>
         </motion.div>
       </div>
