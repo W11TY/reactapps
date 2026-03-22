@@ -34,12 +34,11 @@ const Navbar = () => {
       <nav className="container mx-auto flex items-center justify-between px-6 py-4 lg:py-5">
 
         {/* Logo */}
-        <Link
-          to="/"
-          className="font-heading text-2xl lg:text-3xl font-semibold tracking-wide text-foreground"
-        >
-          SARAS
-        </Link>
+              <Link
+              to="/"
+              className="font-heading text-2xl lg:text-3xl font-semibold tracking-wide text-white">
+              SARAS
+            </Link>
 
         {/* Desktop Nav */}
         <ul className="hidden lg:flex items-center gap-10">
