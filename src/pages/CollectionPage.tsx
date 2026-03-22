@@ -10,6 +10,7 @@ import productScarf from "@/assets/product-scarf.jpg";
 import productred from "@/assets/product-scarf(red).jpg";
 import productblue from "@/assets/product-scarf(blue).jpg";
 import knittingTexture from "@/assets/knitting-texture.jpg"; // ✅ FIXED
+import laptopSleeve from "@/assets/laptop-sleeve.png"; // or .jpg (match your file)
 
 type Category =
   | "All"
@@ -25,39 +26,51 @@ type SortOption =
 
 const products = [
   {
-    id: "cable-knit-scarf",
-    name: "Cable Knit Scarf",
-    price: 2450,
-    priceLabel: "₹2,450",
+    id: "striped-scarf",
+    name: "Striped Knit Scarf",
+    price: 1200,
+    priceLabel: "₹1,200",
     time: "8 hours",
     image: productScarf,
     category: "Scarves",
     tag: "Bestseller",
     description:
-      "A luxuriously soft cable-knit scarf that wraps you in warmth and elegance.",
+      "A soft striped scarf, hand-knitted for everyday warmth with subtle texture.",
   },
   {
-    id: "heritage-beanie",
-    name: "Heritage Wool Beanie",
+    id: "red-scarf",
+    name: "Crimson Wool Scarf",
     price: 1850,
     priceLabel: "₹1,850",
-    time: "5 hours",
+    time: "6 hours",
     image: productred,
-    category: "Accessories", // ✅ now supported
+    category: "Scarves",
     description:
-      "A timeless beanie crafted with heritage knitting techniques passed down through generations.",
+      "A deep red wool scarf, crafted slowly to hold both warmth and character.",
   },
   {
-    id: "aran-cardigan",
-    name: "Aran Cable Cardigan",
-    price: 6900,
-    priceLabel: "₹6,900",
-    time: "24 hours",
+    id: "blue-scarf",
+    name: "Indigo Knit Scarf",
+    price: 1900,
+    priceLabel: "₹1,900",
+    time: "7 hours",
     image: productblue,
-    category: "Cardigans", // ✅ now supported
+    category: "Scarves",
     tag: "New",
     description:
-      "Our masterpiece. A full Aran cable cardigan that takes 24 hours of dedicated hand-knitting.",
+      "A rich indigo scarf with dense knitting, made for quiet, lasting comfort.",
+  },
+  {
+    id: "laptop-sleeve",
+    name: "Saras Knit Sleeve",
+    price: 1100,
+    priceLabel: "₹1,100",
+    time: "6 hours",
+    image: laptopSleeve,
+    category: "Accessories",
+    tag: "New",
+    description:
+      "Crafted in deep maroon wool, this sleeve protects with warmth, not plastic.",
   },
 ];
 

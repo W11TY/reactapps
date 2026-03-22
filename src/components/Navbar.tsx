@@ -15,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "Collection", href: "/CollectionPage" },
+    { label: "Collection", href: "/collection" },
     { label: "Our Story", href: "/story" },
     { label: "Shipping", href: "/shipping-returns" },
   ];
