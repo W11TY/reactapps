@@ -113,20 +113,15 @@ const OurStoryPage = () => {
               </h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  SARAS was founded in 2019 in a sunlit studio that smelled of wool and chamomile tea.
-                  It started with a founder who believed that knitwear should feel like a warm embrace —
-                  not a mass-produced commodity.
+                  Every thread holds patience. Every stitch holds intention.
+                  In a world that rushes, we choose to move with care. 
+                  Each piece in our collection is created with thoughtful attention, quiet artistry, and a deep appreciation for detail. 
+                  We believe true beauty lives in the time, intention, and feeling woven into everything we make.
+                  Designed to offer warmth, softness, and a sense of lasting comfort,
                 </p>
                 <p>
-                  The name "SARAS" means essence — the core of something beautiful and pure. It reflects
-                  our commitment to stripping away the unnecessary, leaving only what matters: quality materials,
-                  skilled hands, and genuine care.
                 </p>
-                <p>
-                  From those early days of knitting by the window, we've grown into a community of artisans
-                  who share a common thread: the belief that slow, meaningful work creates objects worthy
-                  of being treasured.
-                </p>
+                <p></p>
               </div>
             </motion.div>
 
@@ -153,52 +148,7 @@ const OurStoryPage = () => {
         </div>
       </section>
 
-      {/* Values */}
-      <section ref={valuesRef} className="py-20 lg:py-32 bg-secondary">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={valuesInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-20"
-          >
-            <p className="text-sm tracking-luxury uppercase text-accent mb-4">What We Stand For</p>
-            <h2 className="font-heading text-3xl lg:text-5xl xl:text-6xl font-light text-foreground">
-              Our Values, <span className="italic">Woven In</span>
-            </h2>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            {values.map((value, i) => (
-              <motion.div
-                key={value.number}
-                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="flex gap-8 lg:gap-12 items-start mb-16 last:mb-0"
-              >
-                <div className="flex-shrink-0">
-                  <span className="font-heading text-5xl lg:text-6xl font-light text-accent/30">
-                    {value.number}
-                  </span>
-                </div>
-                <div className="pt-2">
-                  <h3 className="font-heading text-2xl lg:text-3xl text-foreground mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed max-w-lg">
-                    {value.description}
-                  </p>
-                  {i < values.length - 1 && (
-                    <div className="w-px h-12 bg-border ml-0 mt-8" />
-                  )}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Timeline */}
       <section className="py-20 lg:py-32">
@@ -210,7 +160,7 @@ const OurStoryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <p className="text-sm tracking-luxury uppercase text-accent mb-4">Our Journey</p>
+            <p className="text-sm tracking-luxury uppercase text-accent mb-4">OUR PHILOSOPHY</p>
             <h2 className="font-heading text-3xl lg:text-5xl font-light text-foreground">
               Milestones, <span className="italic">Stitch by Stitch</span>
             </h2>

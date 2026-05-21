@@ -8,76 +8,73 @@ import Footer from "@/components/Footer";
 import productScarf from "@/assets/product-scarf.jpg";
 import productred from "@/assets/product-scarf(red).jpg";
 import productblue from "@/assets/product-scarf(blue).jpg";
+import laptopSleeve from "@/assets/laptop-sleeve.png";
 
+type Product = {
+  name: string;
+  price: string;
+  time: string;
+  image: string;
+  description: string;
+  materials: string;
+  care: string;
+  story: string;
+};
 
-const allProducts: Record<string, {
-  name: string; price: string; time: string; image: string;
-  description: string; materials: string; care: string; story: string;
-}> = {
-  "cable-knit-scarf": {
-    name: "Cable Knit Scarf",
-    price: "₹2,450",
+const allProducts: Record<string, Product> = {
+  "striped-scarf": {
+    name: "Striped Knit Scarf",
+    price: "₹1,200",
     time: "8 hours",
     image: productScarf,
-    description: "A luxuriously soft cable-knit scarf that wraps you in warmth and elegance. Each cable pattern is meticulously crafted by hand, creating a piece that's as beautiful as it is cozy.",
-    materials: "100% Merino Wool · Hand-spun · Naturally dyed in warm cream · Sourced from family-owned farms in Himachal Pradesh",
-    care: "Hand wash gently in cool water with mild detergent. Lay flat to dry on a clean towel. Store folded, never hang. Avoid direct sunlight when drying.",
-    story: "This scarf was born from the desire to create something that feels like a warm embrace on cold mornings. Our artisan Meera spends 8 hours on each piece, ensuring every cable twist is perfect.",
+    description: "A soft striped scarf, hand-knitted for everyday warmth with subtle texture.",
+    materials: "Premium wool yarn, hand-spun fibers.",
+    care: "Hand wash cold. Lay flat to dry.",
+    story: "Every stripe carries rhythm — knitted slowly, intentionally.",
   },
-  "heritage-beanie": {
-    name: "Heritage Wool Beanie",
-    price: "₹1,850",
-    time: "5 hours",
-    image: productred,
-    description: "A timeless beanie crafted with heritage knitting techniques passed down through generations. Rich wool brown tones with subtle cream detailing.",
-    materials: "100% Highland Wool · Hand-knitted · Natural brown and cream dyes · Elasticated ribbed brim",
-    care: "Hand wash in cold water. Reshape while damp. Dry flat away from heat. Store in a cool, dry place.",
-    story: "Inspired by the beanies worn by mountain shepherds, this piece carries centuries of knitting wisdom in its stitches. Each one takes our artisan Ravi 5 hours to complete.",
-  },
-  "aran-cardigan": {
-    name: "Aran Cable Cardigan",
-    price: "₹6,900",
-    time: "24 hours",
-    image: productblue,
-    description: "Our masterpiece. A full Aran cable cardigan that takes 24 hours of dedicated hand-knitting. Traditional cable patterns meet modern comfort.",
-    materials: "100% Organic Merino Wool · Hand-knitted · Wooden buttons hand-carved · Natural cream color",
-    care: "Dry clean recommended. If hand washing, use wool-specific detergent in lukewarm water. Never wring. Lay flat to dry.",
-    story: "The Aran cardigan is a labor of love that spans three days of knitting. Each cable pattern tells a story — the honeycomb for hard work, the cable for safety, the diamond for wealth.",
-  },
-  "nordic-mittens": {
-    name: "Nordic Pattern Mittens",
-    price: "₹1,650",
+  "red-scarf": {
+    name: "Goblin Scarf",
+    price: "₹1,799",
     time: "6 hours",
     image: productred,
-    description: "Beautifully patterned mittens featuring traditional Nordic colorwork. Warm, playful, and utterly charming.",
-    materials: "100% Wool blend · Two-color jacquard technique · Fleece-lined interior · Ribbed cuffs",
-    care: "Hand wash in cool water. Do not bleach. Reshape and dry flat. Store away from moths with cedar blocks.",
-    story: "These mittens feature a traditional Nordic pattern adapted by our artisan Deepa, who learned colorwork knitting from her grandmother in Kashmir.",
+    description: "A deep red wool scarf crafted slowly to hold warmth and character.",
+    materials: "Soft wool blend.",
+    care: "Gentle hand wash only.",
+    story: "Inspired by warmth in winter evenings.",
   },
-  "chunky-throw": {
-    name: "Chunky Throw Blanket",
-    price: "₹5,200",
-    time: "18 hours",
+  "blue-scarf": {
+    name: "Indigo Blue",
+    price: "₹2,799",
+    time: "7 hours",
     image: productblue,
-    description: "A generous, chunky knit throw blanket that transforms any space into a cozy sanctuary. Made with super-bulky yarn for maximum warmth.",
-    materials: "100% Extra-fine Merino · Super-bulky weight · Hand-knitted · Natural cream with fringe detail",
-    care: "Spot clean or dry clean only due to size. Air regularly. Fold for storage, do not compress.",
-    story: "This blanket is our most ambitious piece — 18 hours of continuous knitting with super-thick yarn, creating a blanket that feels like a warm cloud.",
+    description: "A rich indigo scarf with dense knitting, made for quiet comfort.",
+    materials: "Dense knit wool.",
+    care: "Cold wash, no wringing.",
+    story: "Stillness woven into every thread.",
   },
-  "fireside-socks": {
-    name: "Fireside Wool Socks",
-    price: "₹1,250",
-    time: "4 hours",
-    image: productred,
-    description: "Thick, warm wool socks designed for cozy evenings by the fire. Reinforced heel and toe for lasting comfort.",
-    materials: "80% Wool, 20% Nylon for durability · Hand-knitted · Reinforced construction · Warm brown with cream accents",
-    care: "Hand wash in lukewarm water. Turn inside out. Dry flat. These socks will felt if machine washed.",
-    story: "Designed for those quiet evenings at home, these socks are knitted with a blend that balances warmth with wear. Each pair takes 4 hours of careful work.",
+  "laptop-sleeve": {
+    name: "Saras Knit Sleeve",
+    price: "₹1,100",
+    time: "6 hours",
+    image: laptopSleeve,
+    description: "A handcrafted knitted sleeve in deep maroon tones, offering warmth and protection.",
+    materials: "Thick wool yarn.",
+    care: "Spot clean recommended.",
+    story: "Protection that feels human, not industrial.",
   },
 };
 
-const AccordionItem = ({ title, content, defaultOpen = false }: { title: string; content: string; defaultOpen?: boolean }) => {
+const AccordionItem = ({
+  title,
+  content,
+  defaultOpen = false,
+}: {
+  title: string;
+  content: string;
+  defaultOpen?: boolean;
+}) => {
   const [open, setOpen] = useState(defaultOpen);
+
   return (
     <div className="border-b border-border">
       <button
@@ -87,9 +84,10 @@ const AccordionItem = ({ title, content, defaultOpen = false }: { title: string;
         <span className="font-heading text-lg text-foreground">{title}</span>
         <ChevronDown
           size={18}
-          className={`text-muted-foreground transition-transform duration-300 ${open ? "rotate-180" : ""}`}
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
         />
       </button>
+
       <motion.div
         initial={false}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
@@ -109,10 +107,10 @@ const ProductPage = () => {
 
   if (!product) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-heading text-3xl text-foreground mb-4">Product not found</h1>
-          <Link to="/" className="text-accent hover:underline">Return home</Link>
+          <h1 className="text-3xl mb-4">Product not found</h1>
+          <Link to="/">Return home</Link>
         </div>
       </div>
     );
@@ -125,118 +123,90 @@ const ProductPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-6">
-          {/* Breadcrumb */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mb-8"
-          >
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft size={16} />
-              Back to Collection
-            </Link>
-          </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          {/* Back */}
+          <Link to="/collection" className="inline-flex items-center gap-2 mb-8 text-sm text-muted-foreground">
+            <ArrowLeft size={16} />
+            Back to Collection
+          </Link>
+
+          <div className="grid lg:grid-cols-2 gap-12">
+
             {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative group"
-            >
-              <div className="overflow-hidden bg-card sticky top-28">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <span className="absolute top-6 left-6 px-4 py-2 bg-accent text-accent-foreground text-xs tracking-luxury uppercase">
-                  Crafted by Hand
-                </span>
-              </div>
-            </motion.div>
+            <div className="sticky top-28">
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full aspect-[4/5] object-cover"
+              />
+            </div>
 
             {/* Details */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <p className="text-sm tracking-luxury uppercase text-accent mb-3">SARAS</p>
-              <h1 className="font-heading text-4xl lg:text-5xl font-light text-foreground mb-4">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-muted-foreground mb-2">
+                SARAS
+              </p>
+
+              <h1 className="text-4xl font-heading mb-4">
                 {product.name}
               </h1>
-              <p className="font-heading text-2xl text-foreground mb-6">{product.price}</p>
 
-              <div className="flex items-center gap-3 mb-8 text-sm text-muted-foreground">
-                <span className="inline-block w-2 h-2 rounded-full bg-accent" />
+              <p className="text-2xl text-[#39090B] mb-4">
+                {product.price}
+              </p>
+
+              <p className="text-sm text-muted-foreground mb-6">
                 Takes {product.time} to knit
-              </div>
+              </p>
 
-              <p className="text-muted-foreground leading-relaxed mb-8">
+              <p className="mb-8 text-muted-foreground">
                 {product.description}
               </p>
 
-              {/* Actions */}
-              <div className="flex gap-3 mb-12">
+              {/* Buttons */}
+              <div className="flex gap-3 mb-10">
                 <a
-                  href={`https://wa.me/917753896699?text=Hi, I'm interested in this product: ${encodeURIComponent(product.name)}`}
+                  href={`https://wa.me/917753896699?text=Hi, I'm interested in ${product.name}`}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
-                  <button className="bg-[#610018] text-white px-6 py-3 rounded-lg">
-                    Buy Now on WhatsApp
+                  <button className="bg-[#39090B] text-white px-6 py-3">
+                    Buy on WhatsApp
                   </button>
                 </a>
-                <button
-                  onClick={() => setLiked(!liked)}
-                  className="px-5 py-4 border border-border hover:border-foreground transition-colors"
-                  aria-label="Add to wishlist"
-                >
-                  <Heart size={18} className={liked ? "fill-accent text-accent" : "text-foreground"} />
+
+                <button onClick={() => setLiked(!liked)}>
+                  <Heart className={liked ? "fill-red-500" : ""} />
                 </button>
               </div>
 
-              {/* Accordion Details */}
-              <div>
-                <AccordionItem title="Product Story" content={product.story} defaultOpen />
-                <AccordionItem title="Materials & Yarn" content={product.materials} />
-                <AccordionItem title="Care Instructions" content={product.care} />
-                <AccordionItem
-                  title="Shipping & Handmade Note"
-                  content="Each piece is made to order. Please allow 7-14 days for your item to be lovingly crafted and shipped. As every piece is handmade, slight variations in pattern and color are natural — they're what make your piece uniquely yours."
-                />
-              </div>
-            </motion.div>
+              {/* Accordion */}
+              <AccordionItem title="Story" content={product.story} defaultOpen />
+              <AccordionItem title="Materials" content={product.materials} />
+              <AccordionItem title="Care" content={product.care} />
+            </div>
           </div>
 
-          {/* You May Also Love */}
-          <div className="mt-24">
-            <h2 className="font-heading text-3xl text-foreground text-center mb-12">
-              You May Also Love
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+          {/* Related */}
+          <div className="mt-20">
+            <h2 className="text-2xl mb-6">You may also like</h2>
+
+            <div className="grid md:grid-cols-3 gap-6">
               {otherProducts.map(([key, p]) => (
-                <Link key={key} to={`/product/${key}`} className="group">
-                  <div className="overflow-hidden bg-card mb-4">
-                    <img
-                      src={p.image}
-                      alt={p.name}
-                      className="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                  <h3 className="font-heading text-lg text-foreground">{p.name}</h3>
-                  <p className="text-sm text-muted-foreground mt-1">{p.price}</p>
+                <Link key={key} to={`/product/${key}`}>
+                  <img src={p.image} />
+                  <h3>{p.name}</h3>
+                  <p>{p.price}</p>
                 </Link>
               ))}
             </div>
           </div>
+
         </div>
       </main>
+
       <Footer />
     </div>
   );

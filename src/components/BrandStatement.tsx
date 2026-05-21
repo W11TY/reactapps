@@ -23,13 +23,11 @@ const BrandStatement = () => {
               <span className="italic">Every stitch holds intention.</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              In a world that rushes, we choose to slow down. Each piece in our collection is
-              hand-knitted by skilled artisans who pour hours of care into every single stitch.
-              No machines. No shortcuts. Just hands, yarn, and love.
+              In a world that rushes, we choose to move with care. Each piece in our collection is created with thoughtful attention, quiet artistry, and a deep appreciation for detail. 
+              We believe true beauty lives in the time, intention, and feeling woven into everything we make.
+              Designed to offer warmth, softness, and a sense of lasting comfort,
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Our yarn is ethically sourced from family-owned farms, dyed with natural pigments,
-              and crafted into pieces that carry warmth far beyond their fibers.
             </p>
           </motion.div>
 

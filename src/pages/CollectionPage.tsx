@@ -38,10 +38,10 @@ const products = [
       "A soft striped scarf, hand-knitted for everyday warmth with subtle texture.",
   },
   {
-    id: "red-scarf",
-    name: "Crimson Wool Scarf",
-    price: 1850,
-    priceLabel: "₹1,850",
+    id: "Goblin Scarf",
+    name: "Goblin Scarf",
+    price: 1799,
+    priceLabel: "₹1,799",
     time: "6 hours",
     image: productred,
     category: "Scarves",
@@ -49,10 +49,10 @@ const products = [
       "A deep red wool scarf, crafted slowly to hold both warmth and character.",
   },
   {
-    id: "blue-scarf",
-    name: "Indigo Knit Scarf",
-    price: 1900,
-    priceLabel: "₹1,900",
+    id: "Indigo Blue",
+    name: "Indigo Blue",
+    price: 2900,
+    priceLabel: "₹2,900",
     time: "7 hours",
     image: productblue,
     category: "Scarves",
@@ -71,6 +71,50 @@ const products = [
     tag: "New",
     description:
       "Crafted in deep maroon wool, this sleeve protects with warmth, not plastic.",
+  },
+  {
+    id: "Dusky Grey",
+    name: "Dusky Grey Scarf",
+    price: 1799,
+    priceLabel: "₹1,799",
+    time: "6 hours",
+    image: productred,
+    category: "Scarves",
+    description:
+      "A deep red wool scarf, crafted slowly to hold both warmth and character.",
+  },
+  {
+    id: "Mocha Brown ",
+    name: "Mocha Brown Scarf",
+    price: 1799,
+    priceLabel: "₹1,799",
+    time: "6 hours",
+    image: productred,
+    category: "Scarves",
+    description:
+      "A deep red wool scarf, crafted slowly to hold both warmth and character.",
+  },
+  {
+    id: "Royal Blue",
+    name: "Royal Blue Scarf",
+    price: 1799,
+    priceLabel: "₹1,799",
+    time: "6 hours",
+    image: productred,
+    category: "Scarves",
+    description:
+      "A deep red wool scarf, crafted slowly to hold both warmth and character.",
+  },
+  {
+    id: "Harry Potter",
+    name: "Harry Potter Scarf",
+    price: 1799,
+    priceLabel: "₹1,799",
+    time: "6 hours",
+    image: productred,
+    category: "Scarves",
+    description:
+      "A deep red wool scarf, crafted slowly to hold both warmth and character.",
   },
 ];
 
